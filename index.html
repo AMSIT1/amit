@@ -15,10 +15,222 @@ box-sizing:border-box;
 font-family:Arial,sans-serif;
 }
 
+<body>
+
+<div class="bg-animation"></div>
+
+<section class="hero">
+
+<div class="floating floating1">😊</div>
+<div class="floating floating2">😊</div>
+<div class="floating floating3">😊</div>
+<div class="floating floating4">😊</div>
+<div class="floating floating5">😊</div>
+
+<div class="hero-content">
+
+<div class="label">
+CREDIT CARE RELIEF FOUNDATION
+</div>
+
+<h1 class="amount">
+₹0
+</h1>
+
+<div class="amount-text">
+RELIEF DELIVERED
+</div>
+
+<div class="smile-counter">
+😊 0 SMILES RESTORED 😊
+</div>
+
+<p class="mission">
+Turning financial stress into hope,
+stability and opportunity.
+</p>
+
+<div class="buttons">
+
+<a href="#" class="donate-btn">
+💚 Donate Now
+</a>
+
+<a href="#" class="learn-btn">
+Learn More
+</a>
+
+</div>
+
+</div>
+
+<div class="flow-line"></div>
+
+</section>
+
+<style>
+
 body{
-background:#f3fff5;
+margin:0;
+background:#0f172a;
+font-family:Inter,Arial,sans-serif;
 overflow-x:hidden;
+color:white;
 }
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+.hero-content{
+z-index:10;
+padding:20px;
+}
+
+.label{
+font-size:14px;
+letter-spacing:4px;
+opacity:.8;
+margin-bottom:20px;
+}
+
+.amount{
+font-size:clamp(80px,15vw,220px);
+font-weight:900;
+color:#22c55e;
+margin:0;
+text-shadow:0 0 40px rgba(34,197,94,.4);
+animation:pulse 3s infinite;
+}
+
+.amount-text{
+font-size:24px;
+letter-spacing:4px;
+margin-top:10px;
+opacity:.9;
+}
+
+.smile-counter{
+font-size:clamp(25px,4vw,60px);
+font-weight:700;
+margin-top:30px;
+}
+
+.mission{
+max-width:700px;
+margin:auto;
+margin-top:25px;
+font-size:22px;
+opacity:.8;
+line-height:1.6;
+}
+
+.buttons{
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.donate-btn{
+padding:18px 40px;
+border-radius:60px;
+background:#22c55e;
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:20px;
+}
+
+.learn-btn{
+padding:18px 40px;
+border-radius:60px;
+border:1px solid rgba(255,255,255,.2);
+backdrop-filter:blur(20px);
+color:white;
+text-decoration:none;
+font-size:20px;
+}
+
+.floating{
+position:absolute;
+font-size:50px;
+opacity:.15;
+animation:float 12s linear infinite;
+}
+
+.floating1{left:10%;animation-delay:0s;}
+.floating2{left:25%;animation-delay:2s;}
+.floating3{left:45%;animation-delay:4s;}
+.floating4{left:70%;animation-delay:6s;}
+.floating5{left:85%;animation-delay:8s;}
+
+@keyframes float{
+from{
+transform:translateY(120vh);
+}
+to{
+transform:translateY(-150px);
+}
+}
+
+.flow-line{
+position:absolute;
+bottom:100px;
+left:-50%;
+width:200%;
+height:6px;
+background:
+linear-gradient(
+90deg,
+transparent,
+#22c55e,
+#86efac,
+#22c55e,
+transparent
+);
+animation:flow 4s linear infinite;
+}
+
+@keyframes flow{
+0%{
+transform:translateX(-20%);
+}
+100%{
+transform:translateX(20%);
+}
+}
+
+.bg-animation{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 20% 20%, rgba(34,197,94,.12), transparent 30%),
+radial-gradient(circle at 80% 30%, rgba(34,197,94,.08), transparent 30%),
+radial-gradient(circle at 50% 80%, rgba(34,197,94,.12), transparent 40%);
+z-index:-1;
+}
+
+@keyframes pulse{
+0%,100%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.03);
+}
+}
+
+</style>
+
+</body>
 
 /* HERO */
 
