@@ -1,59 +1,198 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Credit Care Relief Foundation</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
 body{
-font-family:Arial;
+background:#f7fff7;
+color:#222;
+}
+
+.hero{
+min-height:100vh;
+background:linear-gradient(135deg,#0f9d58,#34c759);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-background:#f5fff5;
-padding:40px;
-}
-.counter{
-font-size:60px;
-font-weight:bold;
-color:#16a34a;
-}
-.button{
-background:#16a34a;
+padding:20px;
 color:white;
-padding:15px 30px;
-border-radius:10px;
-text-decoration:none;
-display:inline-block;
-margin-top:20px;
 }
+
+.logo{
+font-size:24px;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+.main-number{
+font-size:clamp(50px,9vw,120px);
+font-weight:900;
+letter-spacing:4px;
+text-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+.subtitle{
+font-size:24px;
+margin-top:15px;
+}
+
+.donate-btn{
+margin-top:30px;
+background:white;
+color:#0f9d58;
+padding:18px 40px;
+border-radius:50px;
+text-decoration:none;
+font-size:22px;
+font-weight:bold;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+padding:60px 20px;
+max-width:1200px;
+margin:auto;
+}
+
 .card{
 background:white;
-padding:20px;
-border-radius:15px;
-margin:20px auto;
-max-width:400px;
-box-shadow:0 2px 10px rgba(0,0,0,.1);
+border-radius:25px;
+padding:35px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.icon{
+font-size:55px;
+}
+
+.big{
+font-size:42px;
+font-weight:900;
+color:#16a34a;
+margin:10px 0;
+}
+
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+.section h2{
+font-size:42px;
+margin-bottom:20px;
+color:#16a34a;
+}
+
+.section p{
+max-width:800px;
+margin:auto;
+line-height:1.8;
+font-size:20px;
+}
+
+.support{
+background:white;
+padding:80px 20px;
+text-align:center;
+}
+
+input{
+width:90%;
+max-width:450px;
+padding:18px;
+border-radius:12px;
+border:1px solid #ddd;
+margin:10px;
+font-size:18px;
+}
+
+button{
+background:#16a34a;
+color:white;
+padding:18px 40px;
+border:none;
+border-radius:12px;
+font-size:20px;
+cursor:pointer;
+}
+
+footer{
+background:#0f9d58;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+.counter{
+transition:all .5s;
 }
 </style>
 </head>
+
 <body>
 
-<h1>Credit Care Relief Foundation</h1>
+<section class="hero">
 
-<p>Helping families overcome financial hardship.</p>
-
-<div class="counter">₹0</div>
-<p>Total Relief Distributed</p>
-
-<div class="card">
-<h2>😊 0 People Helped</h2>
+<div class="logo">
+💚 CREDIT CARE RELIEF FOUNDATION
 </div>
 
-<div class="card">
-<h2>💚 0 Families Supported</h2>
+<div class="main-number counter" id="raised">
+₹000000000
 </div>
 
-<a href="#" class="button">
-Join Early Supporters
+<div class="subtitle">
+Total Relief Distributed
+</div>
+
+<a href="#" class="donate-btn">
+Support CCRF
 </a>
 
-</body>
-</html>
+</section>
+
+<section class="stats">
+
+<div class="card">
+<div class="icon">😊</div>
+<div class="big counter" id="people">0</div>
+<div>People Helped</div>
+</div>
+
+<div class="card">
+<div class="icon">🏠</div>
+<div class="big counter" id="families">0</div>
+<div>Families Supported</div>
+</div>
+
+<div class="card">
+<div class="icon">💚</div>
+<div class="big counter" id="amount">0</div>
+<div>Relief Amount Distributed</div>
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Why CCRF Exists</h2>
+
+<p>
+Millions of families struggle with financial hardship due to
+medical emergencies, job loss, education expenses
